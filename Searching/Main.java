@@ -1,12 +1,15 @@
-import java.lang.annotation.Target;
+package Searching;
 
-class linearSearch{
+
+
+public class Main {
     public static void main(String[] args) {
-        int[] arr = {4,5,7,8,9,2,3};
-        int ans = search(arr, 8);
-        System.out.println("Element at index= "+ans);
+        int[] arr = {1,5,8,6,3,4,9};
+        int ans = Search(arr, 6);
+        System.out.println("the element at index= "+ ans);
     }
-    public static int search(int[] arr , int target){
+    public static  int Search(int[] arr , int target){
+        // if the arr is empty
         if(arr.length == 0){
             return -1;
         }
@@ -16,6 +19,7 @@ class linearSearch{
                 return i;
             }
         }
+        // if element are not found
         return -1;
     }
 }
